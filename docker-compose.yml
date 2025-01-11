@@ -1,0 +1,35 @@
+version: "3.8"
+
+services:
+  micro-service1:
+    build:
+      context: ./micro-service1
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3000"
+    restart: always
+    container_name: micro-service1
+    environment:
+      - NODE_ENV=production
+
+  micro-service2:
+    build:
+      context: ./micro-service2
+      dockerfile: Dockerfile
+    ports:
+      - "3002:3000"
+    restart: always
+    container_name: micro-service2
+    environment:
+      - NODE_ENV=production
+
+  micro-service3:
+    build:
+      context: ./micro-service3
+      dockerfile: Dockerfile
+    ports:
+      - "3003:3000"
+    restart: always
+    container_name: micro-service3
+    environment:
+      - NODE_ENV=production
