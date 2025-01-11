@@ -6,7 +6,7 @@ services:
       context: ./micro-service1
       dockerfile: Dockerfile
     ports:
-      - "3001:3000"
+      - "3001:3001"
     restart: always
     container_name: micro-service1
     environment:
@@ -17,7 +17,7 @@ services:
       context: ./micro-service2
       dockerfile: Dockerfile
     ports:
-      - "3002:3000"
+      - "3002:3002"
     restart: always
     container_name: micro-service2
     environment:
@@ -28,7 +28,7 @@ services:
       context: ./micro-service3
       dockerfile: Dockerfile
     ports:
-      - "3003:3000"
+      - "3003:3003"
     restart: always
     container_name: micro-service3
     environment:
